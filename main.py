@@ -11,10 +11,11 @@ def print_hi():
     b[0] = 'q'
     print(b)
     print(a)
-    print(a, b)
-    print(b, a)
-
-
+    dict2 = {'runoob': 'runoob.com', 'google': 'google.com'}
+    print(repr(dict2))
+    tinydict = {'name': 'runoob', 'code': 1, 'site': 'www.runoob.com'}
+    print(tinydict.keys())
+    print(tinydict.values())
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
     print_hi()
