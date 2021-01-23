@@ -1,16 +1,8 @@
+from dog import Dog, Cat
+
+
 def test4class():
     """test for class"""
-    class Dog:
-        def __init__(self, name, age, weight, length=5):
-            """initialize the profile/attribute """
-            self.name = name
-            self.age = age
-            self.weight = weight
-            self.length = length
-
-        def sit(self):
-            print(f"one {self.age} years old and {self.length}m long dog named {self.name:<8} is sitting now")
-
     harry = Dog('harry', 5, 40)
     harry.sit()
     other_dog = Dog('harness', 4, 20)
@@ -46,6 +38,11 @@ def test4class():
             else:
                 print('so small')
 
+    class ToyCat(Cat):
+        def __init__(self, name, kind):
+            super().__init__(name, kind)
+            self.rat = 8
+
     lily = ToyDog('lily', 1, 6, 8)
     lily.price = 20
     lily.dog_model = 'iron'
@@ -53,6 +50,8 @@ def test4class():
     lily.battery = Battery(lily.dog_model, 5, 'mark')   # 把类中的数据传递到属性类中
     lily.battery.message_show()
     lily.decision()
+    lina = ToyCat('lina', 'bow')
+    print(lina.rat)
 
 
 if __name__ == '__main__':
